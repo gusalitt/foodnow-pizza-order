@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+  --bg-color: #f7f7f7;
+  --text-color: #363328;
+  --border: #adadad;
+  --primary-color: #e77e22;
+  --primary-color-hover: #b3621b;
+  --primary-text-color: #fff;
+
+  --secondary-color: #E3E3E3;
+  --secondary-text-color: #5e616b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Inter', sans-serif;
+  overflow: visible;
+  overflow-x: hidden !important;
+  width: 100%;
+}
+body.modal-open {
+  overflow: hidden;
+}
+section {
+  width: 100%;
+}
+.container{
+  width: 100%;
+  max-width: 1440px;
+  padding: 3rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+li {
+  list-style: none;
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: #e7e7e7;
+  margin: 2rem 0;
+}
+a {
+  text-decoration: none;
+  display: inline-flex;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 2rem;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+}

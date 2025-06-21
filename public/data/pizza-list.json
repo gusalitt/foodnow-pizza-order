@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Cheese Pizza",
+            "price": 8,
+            "discount": {
+                "is_active": false,
+                "final_price": 8
+            },
+            "toppings": [1,2,3,4,8,11]
+        },
+        {
+            "id": 2,
+            "name": "Veggie Pizza",
+            "price": 10,
+            "discount": {
+                "is_active": true,
+                "final_price": 8.5
+            },
+            "toppings": [2,3,4,5,6,7,9,11]
+        },
+        {
+            "id": 3,
+            "name": "Classical Pizza",
+            "price": 12,
+            "discount": {
+                "is_active": false,
+                "final_price": 12
+            },
+            "toppings": [2,3,4,8,9,10,11,12]
+        }
+    ]
+}
