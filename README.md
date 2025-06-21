@@ -14,7 +14,7 @@ Landing page sederhana untuk melakukan pemesanan pizza secara langsung melalui t
 ## 🚀 Cara Menjalankan
 
 ```bash
-git clone https://github.com/username/foodnow-pizza-order.git
+git clone https://github.com/gusalitt/foodnow-pizza-order.git
 cd foodnow-pizza-order
 npm install
 npm run dev

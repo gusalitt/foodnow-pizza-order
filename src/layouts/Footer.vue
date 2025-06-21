@@ -53,9 +53,9 @@ const additionalStyles = `
                             <NavLink to="/contact-us" :style="additionalStyles">Contact Us</NavLink>
                         </ul>
                         <ul>
-                            <NavLink to="/" :style="additionalStyles">Contact</NavLink>
-                            <NavLink to="/" :style="additionalStyles">Login</NavLink>
-                            <NavLink to="/" :style="additionalStyles">Register</NavLink>
+                            <NavLink to="" :style="additionalStyles">Contact</NavLink>
+                            <NavLink to="" :style="additionalStyles">Login</NavLink>
+                            <NavLink to="" :style="additionalStyles">Register</NavLink>
                         </ul>
                     </div>
                 </div>
