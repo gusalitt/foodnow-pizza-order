@@ -2,9 +2,14 @@
 import Button from '@/components/ui/Button.vue';
 import NavLink from '@/components/ui/NavLink.vue';
 import Logo from '@/assets/img/logo.svg';
-import { ref } from 'vue';
+import LogoAlt from '@/assets/img/logo-alt.svg';
+import { ref, computed } from 'vue';
+import { currentView } from '@/utils/manualRouter';
 
 const menuOpen = ref(false);
+const linkColor = computed(() => {
+    return currentView.value.__name === 'NotFound' ? '#000' : "#fff"
+});
 
 </script>
 
@@ -13,7 +18,7 @@ const menuOpen = ref(false);
         <nav class="navbar">
             <div class="navbar__brand">
                 <a href="">
-                    <img :src="Logo" alt="" width="170">
+                    <img :src="linkColor === '#fff' ? Logo : LogoAlt" alt="" width="170">
                 </a>
 
                 <div class="navbar__toggle" @click="menuOpen = !menuOpen">
@@ -24,15 +29,15 @@ const menuOpen = ref(false);
             </div>
                 <ul :class="{'navbar__links': true, 'active': menuOpen}">
 
-                    <NavLink to="/">Home</NavLink>
-                    <NavLink to="/order">Order</NavLink>
-                    <NavLink to="/about">About</NavLink>
-                    <NavLink to="/blog">Blog</NavLink>
-                    <NavLink to="/contact-us" :style="`width: max-content;`">Contact Us</NavLink>
+                    <NavLink to="/" :style="`color: ${linkColor};`">Home</NavLink>
+                    <NavLink to="/order" :style="`color: ${linkColor};`">Order</NavLink>
+                    <NavLink to="/about" :style="`color: ${linkColor};`">About</NavLink>
+                    <NavLink to="/blog" :style="`color: ${linkColor};`">Blog</NavLink>
+                    <NavLink to="/contact-us" :style="`width: max-content; color: ${linkColor};`">Contact Us</NavLink>
 
                 </ul>
                 <div :class="{'navbar__actions': true, 'active': menuOpen}">
-                    <Button variant="link">Login</Button>
+                    <Button variant="link" :style="`color: ${linkColor};`">Login</Button>
                     <Button variant="default">Register</Button>
                 </div>
         </nav>
@@ -47,6 +52,7 @@ header {
     left: 0;
     right: 0;
     width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 .navbar {
     display: grid;

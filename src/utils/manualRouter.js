@@ -3,6 +3,7 @@
 
 import { ref, computed } from 'vue';
 import Order from '@/pages/Order.vue'
+import NotFound from '@/pages/NotFound.vue';
 
 // Define your routes here
 const routes = {
@@ -23,7 +24,7 @@ const updateRoute = () => {
 
 // Computed property to get the current view component based on the current path
 const currentView = computed(() => {
-    return routes[currentPath.value || '/'];
+    return routes[currentPath.value] || NotFound;
 });
 
 /**
